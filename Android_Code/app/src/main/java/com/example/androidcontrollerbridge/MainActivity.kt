@@ -1,6 +1,8 @@
 package com.example.androidcontrollerbridge
 
+import android.content.Context
 import android.content.Intent
+import android.net.ConnectivityManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -28,5 +30,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent);
 
         }
+    }
+    private fun checkConnectivity(){
+        val cm= getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val activeNetwork = cm.
     }
 }
